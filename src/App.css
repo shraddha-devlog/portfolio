@@ -9,8 +9,18 @@ main {
 }
 
 .section {
+  position: relative;
   padding: 88px 24px;
-  border-top: 1px solid var(--line);
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line-strong) 30%, var(--line-strong) 70%, transparent);
 }
 
 .section-inner {
@@ -30,12 +40,20 @@ main {
 }
 
 .section-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-family: var(--font-mono);
   font-size: 12.5px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--accent);
   margin: 0 0 12px;
+}
+
+.constellation {
+  color: var(--accent);
+  flex-shrink: 0;
 }
 
 .section-title {
@@ -192,12 +210,67 @@ main {
 /* ---------- hero ---------- */
 
 .hero {
+  position: relative;
   padding: 120px 24px 96px;
+  overflow: hidden;
 }
 
 .hero-inner {
+  position: relative;
   max-width: 720px;
   margin: 0 auto;
+}
+
+.orbit-decor {
+  position: absolute;
+  top: 88px;
+  right: 6%;
+  width: 180px;
+  height: 180px;
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+.orbit-ring {
+  position: absolute;
+  inset: 0;
+  border: 1px dashed var(--line-strong);
+  border-radius: 50%;
+}
+
+.orbit-ring-2 {
+  inset: 34px;
+  border-style: dotted;
+}
+
+.orbit-track {
+  position: absolute;
+  inset: 0;
+  animation: orbit-spin 18s linear infinite;
+}
+
+.orbit-dot {
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  margin-left: -4px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px 2px var(--accent);
+}
+
+@keyframes orbit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 860px) {
+  .orbit-decor {
+    display: none;
+  }
 }
 
 /* ---------- cosmos background (sitewide, fixed) ---------- */
@@ -344,7 +417,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0;
-  border-left: 2px solid var(--line);
+  border-left: 2px dotted var(--line-strong);
 }
 
 .timeline-item {
@@ -363,8 +436,19 @@ main {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: var(--surface);
-  border: 2px solid var(--accent);
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--surface), 0 0 10px 2px var(--accent);
+  animation: node-pulse 3.2s ease-in-out infinite;
+}
+
+.timeline-item:nth-child(2)::before { animation-delay: 0.4s; }
+.timeline-item:nth-child(3)::before { animation-delay: 0.8s; }
+.timeline-item:nth-child(4)::before { animation-delay: 1.2s; }
+.timeline-item:nth-child(5)::before { animation-delay: 1.6s; }
+
+@keyframes node-pulse {
+  0%, 100% { opacity: 0.75; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.25); }
 }
 
 .timeline-when {

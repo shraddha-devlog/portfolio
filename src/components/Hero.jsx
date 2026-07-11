@@ -1,6 +1,14 @@
 function Hero() {
   return (
     <section id="top" className="hero">
+      <div className="orbit-decor" aria-hidden="true">
+        <span className="orbit-ring orbit-ring-1" />
+        <span className="orbit-ring orbit-ring-2">
+          <span className="orbit-track">
+            <span className="orbit-dot" />
+          </span>
+        </span>
+      </div>
       <div className="hero-inner">
         <p className="eyebrow">Full-Stack Developer · Pune, India</p>
         <h1 className="hero-title">

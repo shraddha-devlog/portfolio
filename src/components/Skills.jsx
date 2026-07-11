@@ -1,13 +1,19 @@
+import ConstellationGlyph from './ConstellationGlyph'
+
 const frontend = ['React.js', 'TypeScript', 'JavaScript (ES6+)', 'Tailwind CSS']
 const backend = ['Node.js', 'Express.js', 'MongoDB', 'PostgreSQL']
 const building = ['Java', 'Spring Boot']
+const design = ['Figma', 'Adobe XD', 'CorelDRAW']
 const practice = ['WCAG 2.1 Accessibility', 'Agile / Scrum', 'Solution Architecture']
 
 function Skills() {
   return (
     <section id="skills" className="section">
       <div className="section-inner reveal">
-        <p className="section-eyebrow">Skills</p>
+        <p className="section-eyebrow">
+          <ConstellationGlyph pattern="skills" />
+          Skills
+        </p>
         <h2 className="section-title">Full-stack across the JavaScript ecosystem, expanding into Java.</h2>
 
         <div className="skills-grid">
@@ -46,6 +52,20 @@ function Skills() {
             </h3>
             <ul className="chip-list">
               {building.map((skill) => (
+                <li key={skill} className="chip chip-building">
+                  {skill}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="skills-group">
+            <h3 className="skills-group-title">
+              <span className="dot dot-building" aria-hidden="true" />
+              UI/UX &mdash; in progress
+            </h3>
+            <ul className="chip-list">
+              {design.map((skill) => (
                 <li key={skill} className="chip chip-building">
                   {skill}
                 </li>

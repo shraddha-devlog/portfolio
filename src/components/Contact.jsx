@@ -1,3 +1,5 @@
+import ConstellationGlyph from './ConstellationGlyph'
+
 function GithubIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
@@ -29,7 +31,10 @@ function Contact() {
   return (
     <section id="contact" className="section">
       <div className="section-inner reveal">
-        <p className="section-eyebrow">Contact</p>
+        <p className="section-eyebrow">
+          <ConstellationGlyph pattern="contact" />
+          Contact
+        </p>
         <h2 className="section-title">Open to full-stack developer roles in Pune, and remote.</h2>
         <p className="about-body">
           If you&rsquo;re hiring, or just want to talk about the projects above, my inbox is the fastest way

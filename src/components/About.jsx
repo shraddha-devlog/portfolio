@@ -1,3 +1,5 @@
+import ConstellationGlyph from './ConstellationGlyph'
+
 const timeline = [
   {
     when: '2019 — 2023',
@@ -34,7 +36,10 @@ function About() {
   return (
     <section id="about" className="section">
       <div className="section-inner reveal">
-        <p className="section-eyebrow">About</p>
+        <p className="section-eyebrow">
+          <ConstellationGlyph pattern="about" />
+          About
+        </p>
         <h2 className="section-title">Full-stack, from government infrastructure to enterprise platforms.</h2>
         <p className="about-body">
           Three years across four engagements — public-sector portals, an accessibility-first design system,
