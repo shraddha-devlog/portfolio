@@ -192,71 +192,78 @@ main {
 /* ---------- hero ---------- */
 
 .hero {
-  position: relative;
   padding: 120px 24px 96px;
-  overflow: hidden;
 }
 
-.hero-bg {
+.hero-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ---------- cosmos background (sitewide, fixed) ---------- */
+
+.cosmos-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.starfield-canvas {
   position: absolute;
   inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
 }
 
-.blob {
+.nebula {
   position: absolute;
   border-radius: 50%;
-  filter: blur(70px);
-  opacity: 0.32;
+  filter: blur(100px);
+  opacity: var(--nebula-opacity);
   will-change: transform;
 }
 
-.blob-1 {
-  width: 380px;
-  height: 380px;
-  top: -140px;
-  left: -60px;
-  background: var(--glow-1);
-  animation: drift-a 24s ease-in-out infinite;
+.nebula-1 {
+  width: 46vw;
+  height: 46vw;
+  max-width: 560px;
+  max-height: 560px;
+  top: -14vw;
+  left: -12vw;
+  background: var(--nebula-1);
+  animation: drift-a 38s ease-in-out infinite;
 }
 
-.blob-2 {
-  width: 320px;
-  height: 320px;
-  top: 20px;
-  right: -100px;
-  background: var(--glow-2);
-  opacity: 0.24;
-  animation: drift-b 30s ease-in-out infinite;
+.nebula-2 {
+  width: 40vw;
+  height: 40vw;
+  max-width: 480px;
+  max-height: 480px;
+  top: 32vh;
+  right: -14vw;
+  background: var(--nebula-2);
+  animation: drift-b 44s ease-in-out infinite;
 }
 
-.blob-3 {
-  width: 260px;
-  height: 260px;
-  bottom: -160px;
-  left: 30%;
-  background: var(--ink);
-  opacity: 0.06;
-  animation: drift-a 26s ease-in-out infinite reverse;
+.nebula-3 {
+  width: 38vw;
+  height: 38vw;
+  max-width: 440px;
+  max-height: 440px;
+  bottom: -12vw;
+  left: 22vw;
+  background: var(--nebula-3);
+  animation: drift-a 40s ease-in-out infinite reverse;
 }
 
 @keyframes drift-a {
   0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(50px, 34px) scale(1.1); }
+  50% { transform: translate(4vw, 3vh) scale(1.12); }
 }
 
 @keyframes drift-b {
   0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-44px, 46px) scale(0.92); }
-}
-
-.hero-inner {
-  position: relative;
-  z-index: 1;
-  max-width: 720px;
-  margin: 0 auto;
+  50% { transform: translate(-3.5vw, 4vh) scale(0.9); }
 }
 
 .eyebrow {

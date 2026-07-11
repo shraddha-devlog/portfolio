@@ -1,11 +1,6 @@
 function Hero() {
   return (
     <section id="top" className="hero">
-      <div className="hero-bg" aria-hidden="true">
-        <span className="blob blob-1" />
-        <span className="blob blob-2" />
-        <span className="blob blob-3" />
-      </div>
       <div className="hero-inner">
         <p className="eyebrow">Full-Stack Developer · Pune, India</p>
         <h1 className="hero-title">

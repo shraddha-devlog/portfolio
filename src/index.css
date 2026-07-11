@@ -7,22 +7,26 @@
 @import "@fontsource/ibm-plex-mono/500.css";
 
 :root {
-  --bg: #eef1ef;
+  --bg: #eef0f8;
   --surface: #ffffff;
-  --surface-2: #e2e8e4;
-  --ink: #14181a;
-  --ink-muted: #55605c;
+  --surface-2: #e3e6f2;
+  --ink: #171528;
+  --ink-muted: #5b5a78;
   --accent: #a8752a;
   --accent-ink: #17120a;
   --accent-soft: #f0e2c2;
-  --line: rgba(20, 24, 26, 0.14);
-  --line-strong: rgba(20, 24, 26, 0.28);
-  --state-confident: #a8752a;
-  --state-building: #55605c;
-  --shadow: 0 1px 2px rgba(20, 24, 26, 0.06);
-  --glow-1: #a8752a;
-  --glow-2: #5b8a86;
   --accent-bright: #c68f3f;
+  --line: rgba(23, 21, 40, 0.12);
+  --line-strong: rgba(23, 21, 40, 0.24);
+  --state-confident: #a8752a;
+  --state-building: #5b5a78;
+  --shadow: 0 1px 2px rgba(23, 21, 40, 0.08);
+
+  --star-rgb: 60, 55, 95;
+  --nebula-1: #9d7fd1;
+  --nebula-2: #7fa0e0;
+  --nebula-3: #6dc3c9;
+  --nebula-opacity: 0.16;
 
   --font-display: "Bricolage Grotesque", "Segoe UI", sans-serif;
   --font-body: "IBM Plex Sans", -apple-system, "Segoe UI", sans-serif;
@@ -33,58 +37,73 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #171310;
-    --surface: #1f1a15;
-    --surface-2: #2a2319;
-    --ink: #f3efe7;
-    --ink-muted: #b3a999;
+    --bg: #0a0a16;
+    --surface: #14131f;
+    --surface-2: #1c1a2b;
+    --ink: #eef0fb;
+    --ink-muted: #a3a2c2;
     --accent: #e0a83f;
     --accent-ink: #17120a;
     --accent-soft: #3a2f1c;
-    --line: rgba(243, 239, 231, 0.12);
-    --line-strong: rgba(243, 239, 231, 0.24);
-    --state-confident: #e0a83f;
-    --state-building: #b3a999;
-    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-    --glow-1: #e0a83f;
-    --glow-2: #6fb0ab;
     --accent-bright: #f0be6a;
+    --line: rgba(238, 240, 251, 0.1);
+    --line-strong: rgba(238, 240, 251, 0.22);
+    --state-confident: #e0a83f;
+    --state-building: #a3a2c2;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+
+    --star-rgb: 238, 240, 251;
+    --nebula-1: #6d3fa0;
+    --nebula-2: #3454b4;
+    --nebula-3: #1f8fa6;
+    --nebula-opacity: 0.35;
   }
 }
 
 :root[data-theme="dark"] {
-  --bg: #171310;
-  --surface: #1f1a15;
-  --surface-2: #2a2319;
-  --ink: #f3efe7;
-  --ink-muted: #b3a999;
+  --bg: #0a0a16;
+  --surface: #14131f;
+  --surface-2: #1c1a2b;
+  --ink: #eef0fb;
+  --ink-muted: #a3a2c2;
   --accent: #e0a83f;
   --accent-ink: #17120a;
   --accent-soft: #3a2f1c;
-  --line: rgba(243, 239, 231, 0.12);
-  --line-strong: rgba(243, 239, 231, 0.24);
+  --accent-bright: #f0be6a;
+  --line: rgba(238, 240, 251, 0.1);
+  --line-strong: rgba(238, 240, 251, 0.22);
   --state-confident: #e0a83f;
-  --state-building: #b3a999;
-  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --state-building: #a3a2c2;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+
+  --star-rgb: 238, 240, 251;
+  --nebula-1: #6d3fa0;
+  --nebula-2: #3454b4;
+  --nebula-3: #1f8fa6;
+  --nebula-opacity: 0.35;
 }
 
 :root[data-theme="light"] {
-  --bg: #eef1ef;
+  --bg: #eef0f8;
   --surface: #ffffff;
-  --surface-2: #e2e8e4;
-  --ink: #14181a;
-  --ink-muted: #55605c;
+  --surface-2: #e3e6f2;
+  --ink: #171528;
+  --ink-muted: #5b5a78;
   --accent: #a8752a;
   --accent-ink: #17120a;
   --accent-soft: #f0e2c2;
-  --line: rgba(20, 24, 26, 0.14);
-  --line-strong: rgba(20, 24, 26, 0.28);
-  --state-confident: #a8752a;
-  --state-building: #55605c;
-  --shadow: 0 1px 2px rgba(20, 24, 26, 0.06);
-  --glow-1: #a8752a;
-  --glow-2: #5b8a86;
   --accent-bright: #c68f3f;
+  --line: rgba(23, 21, 40, 0.12);
+  --line-strong: rgba(23, 21, 40, 0.24);
+  --state-confident: #a8752a;
+  --state-building: #5b5a78;
+  --shadow: 0 1px 2px rgba(23, 21, 40, 0.08);
+
+  --star-rgb: 60, 55, 95;
+  --nebula-1: #9d7fd1;
+  --nebula-2: #7fa0e0;
+  --nebula-3: #6dc3c9;
+  --nebula-opacity: 0.16;
 }
 
 * {
@@ -93,6 +112,7 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--bg);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -106,28 +126,13 @@ html {
   }
 }
 
-@keyframes grid-pan {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 48px 48px;
-  }
-}
-
 body {
   margin: 0;
-  background-color: var(--bg);
-  background-image:
-    linear-gradient(var(--line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  background-size: 48px 48px;
-  animation: grid-pan 70s linear infinite;
   color: var(--ink);
   font-family: var(--font-body);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 h1, h2, h3 {

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Cosmos from './components/Cosmos'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -43,6 +44,7 @@ function App() {
 
   return (
     <>
+      <Cosmos />
       <Nav theme={theme} onToggleTheme={toggleTheme} />
       <main>
         <Hero />
