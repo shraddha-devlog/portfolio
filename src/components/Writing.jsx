@@ -2,14 +2,6 @@ import ConstellationGlyph from './ConstellationGlyph'
 
 const posts = [
   {
-    id: 'design-thinking-habit',
-    title: 'Design Thinking Isn’t a Workshop — It’s a Habit',
-    tag: 'Design Thinking',
-    status: 'Essay',
-    excerpt:
-      'Three years into shipping interfaces, the thing that actually changed how I build wasn’t a course — it was realizing every accessibility fix is a design decision in disguise. Design thinking, for me, is less about sticky notes and more about asking who gets stuck here, and why, before I open the editor.',
-  },
-  {
     id: 'genai-vs-human',
     title: 'Gen AI vs. Human: Where the Line Actually Moves',
     tag: 'AI × Engineering',
