@@ -1,18 +1,10 @@
 function Hero() {
   return (
     <section id="top" className="hero">
-      <div className="orbit-decor" aria-hidden="true">
-        <span className="orbit-ring orbit-ring-1" />
-        <span className="orbit-ring orbit-ring-2">
-          <span className="orbit-track">
-            <span className="orbit-dot" />
-          </span>
-        </span>
-      </div>
       <div className="hero-inner">
         <p className="eyebrow">Full-Stack Developer · Pune, India</p>
         <h1 className="hero-title">
-          I build software — <span className="accent-text">and I know what the client actually needs.</span>
+          I build software — <em className="accent-text">and I know what the client actually needs.</em>
         </h1>
         <p className="hero-lede">
           Full-stack developer with 3+ years building React/TypeScript platforms — from a 100+ institute

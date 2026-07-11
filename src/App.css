@@ -2,6 +2,52 @@
   font-family: var(--font-mono);
 }
 
+/* ---------- custom cursor ---------- */
+
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--ink);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease, opacity 0.2s ease;
+}
+
+body:has(a:hover) .cursor-ring,
+body:has(button:hover) .cursor-ring {
+  width: 56px;
+  height: 56px;
+  border-color: var(--accent);
+}
+
+@media (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+}
+
 /* ---------- layout shell ---------- */
 
 main {
@@ -92,9 +138,9 @@ main {
 }
 
 .nav-mark {
-  font-family: var(--font-mono);
-  font-weight: 500;
-  font-size: 15px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 19px;
   text-decoration: none;
   color: var(--ink);
   white-space: nowrap;
@@ -221,124 +267,6 @@ main {
   margin: 0 auto;
 }
 
-.orbit-decor {
-  position: absolute;
-  top: 88px;
-  right: 6%;
-  width: 180px;
-  height: 180px;
-  pointer-events: none;
-  opacity: 0.55;
-}
-
-.orbit-ring {
-  position: absolute;
-  inset: 0;
-  border: 1px dashed var(--line-strong);
-  border-radius: 50%;
-}
-
-.orbit-ring-2 {
-  inset: 34px;
-  border-style: dotted;
-}
-
-.orbit-track {
-  position: absolute;
-  inset: 0;
-  animation: orbit-spin 18s linear infinite;
-}
-
-.orbit-dot {
-  position: absolute;
-  top: -4px;
-  left: 50%;
-  width: 8px;
-  height: 8px;
-  margin-left: -4px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 10px 2px var(--accent);
-}
-
-@keyframes orbit-spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (max-width: 860px) {
-  .orbit-decor {
-    display: none;
-  }
-}
-
-/* ---------- cosmos background (sitewide, fixed) ---------- */
-
-.cosmos-bg {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.starfield-canvas {
-  position: absolute;
-  inset: 0;
-}
-
-.nebula {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(100px);
-  opacity: var(--nebula-opacity);
-  will-change: transform;
-}
-
-.nebula-1 {
-  width: 46vw;
-  height: 46vw;
-  max-width: 560px;
-  max-height: 560px;
-  top: -14vw;
-  left: -12vw;
-  background: var(--nebula-1);
-  animation: drift-a 38s ease-in-out infinite;
-}
-
-.nebula-2 {
-  width: 40vw;
-  height: 40vw;
-  max-width: 480px;
-  max-height: 480px;
-  top: 32vh;
-  right: -14vw;
-  background: var(--nebula-2);
-  animation: drift-b 44s ease-in-out infinite;
-}
-
-.nebula-3 {
-  width: 38vw;
-  height: 38vw;
-  max-width: 440px;
-  max-height: 440px;
-  bottom: -12vw;
-  left: 22vw;
-  background: var(--nebula-3);
-  animation: drift-a 40s ease-in-out infinite reverse;
-}
-
-@keyframes drift-a {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(4vw, 3vh) scale(1.12); }
-}
-
-@keyframes drift-b {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-3.5vw, 4vh) scale(0.9); }
-}
-
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 13px;
@@ -357,18 +285,8 @@ main {
 }
 
 .accent-text {
-  background: linear-gradient(100deg, var(--accent) 20%, var(--accent-bright) 45%, var(--accent) 70%);
-  background-size: 220% auto;
-  background-position: 0% center;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: shimmer 7s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-  0%, 100% { background-position: 0% center; }
-  50% { background-position: 100% center; }
+  font-style: italic;
+  color: var(--accent);
 }
 
 .hero-lede {

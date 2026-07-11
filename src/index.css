@@ -1,109 +1,93 @@
-@import "@fontsource/bricolage-grotesque/500.css";
-@import "@fontsource/bricolage-grotesque/700.css";
-@import "@fontsource/ibm-plex-sans/400.css";
-@import "@fontsource/ibm-plex-sans/500.css";
-@import "@fontsource/ibm-plex-sans/600.css";
-@import "@fontsource/ibm-plex-mono/400.css";
-@import "@fontsource/ibm-plex-mono/500.css";
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/400-italic.css";
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/playfair-display/700-italic.css";
+@import "@fontsource/playfair-display/900.css";
+@import "@fontsource/dm-sans/300.css";
+@import "@fontsource/dm-sans/400.css";
+@import "@fontsource/dm-sans/500.css";
+@import "@fontsource/dm-mono/300.css";
+@import "@fontsource/dm-mono/400.css";
+@import "@fontsource/dm-mono/500.css";
 
 :root {
-  --bg: #eef0f8;
-  --surface: #ffffff;
-  --surface-2: #e3e6f2;
-  --ink: #171528;
-  --ink-muted: #5b5a78;
-  --accent: #a8752a;
-  --accent-ink: #17120a;
-  --accent-soft: #f0e2c2;
-  --accent-bright: #c68f3f;
-  --line: rgba(23, 21, 40, 0.12);
-  --line-strong: rgba(23, 21, 40, 0.24);
-  --state-confident: #a8752a;
-  --state-building: #5b5a78;
-  --shadow: 0 1px 2px rgba(23, 21, 40, 0.08);
+  --bg: #f5f0e8;
+  --surface: #ede8dc;
+  --surface-2: #e4ddcd;
+  --ink: #0d0d0d;
+  --ink-muted: #7a7269;
+  --accent: #c84b2f;
+  --accent-ink: #f5f0e8;
+  --accent-soft: rgba(200, 75, 47, 0.12);
+  --accent-bright: #c9993a;
+  --line: rgba(13, 13, 13, 0.12);
+  --line-strong: rgba(13, 13, 13, 0.24);
+  --state-confident: #c84b2f;
+  --state-building: #7a7269;
+  --shadow: 0 1px 2px rgba(13, 13, 13, 0.08);
+  --grain-opacity: 0.035;
 
-  --star-rgb: 60, 55, 95;
-  --nebula-1: #9d7fd1;
-  --nebula-2: #7fa0e0;
-  --nebula-3: #6dc3c9;
-  --nebula-opacity: 0.16;
-
-  --font-display: "Bricolage Grotesque", "Segoe UI", sans-serif;
-  --font-body: "IBM Plex Sans", -apple-system, "Segoe UI", sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  --font-display: "Playfair Display", "Georgia", serif;
+  --font-body: "DM Sans", -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "DM Mono", ui-monospace, Consolas, monospace;
 
   color-scheme: light dark;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0a0a16;
-    --surface: #14131f;
-    --surface-2: #1c1a2b;
-    --ink: #eef0fb;
-    --ink-muted: #a3a2c2;
-    --accent: #e0a83f;
-    --accent-ink: #17120a;
-    --accent-soft: #3a2f1c;
-    --accent-bright: #f0be6a;
-    --line: rgba(238, 240, 251, 0.1);
-    --line-strong: rgba(238, 240, 251, 0.22);
-    --state-confident: #e0a83f;
-    --state-building: #a3a2c2;
+    --bg: #151210;
+    --surface: #1e1a17;
+    --surface-2: #262019;
+    --ink: #f0ebe0;
+    --ink-muted: #9a9088;
+    --accent: #e05c3a;
+    --accent-ink: #151210;
+    --accent-soft: rgba(224, 92, 58, 0.16);
+    --accent-bright: #d4a84b;
+    --line: rgba(240, 235, 224, 0.1);
+    --line-strong: rgba(240, 235, 224, 0.22);
+    --state-confident: #e05c3a;
+    --state-building: #9a9088;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-
-    --star-rgb: 238, 240, 251;
-    --nebula-1: #6d3fa0;
-    --nebula-2: #3454b4;
-    --nebula-3: #1f8fa6;
-    --nebula-opacity: 0.35;
+    --grain-opacity: 0.05;
   }
 }
 
 :root[data-theme="dark"] {
-  --bg: #0a0a16;
-  --surface: #14131f;
-  --surface-2: #1c1a2b;
-  --ink: #eef0fb;
-  --ink-muted: #a3a2c2;
-  --accent: #e0a83f;
-  --accent-ink: #17120a;
-  --accent-soft: #3a2f1c;
-  --accent-bright: #f0be6a;
-  --line: rgba(238, 240, 251, 0.1);
-  --line-strong: rgba(238, 240, 251, 0.22);
-  --state-confident: #e0a83f;
-  --state-building: #a3a2c2;
+  --bg: #151210;
+  --surface: #1e1a17;
+  --surface-2: #262019;
+  --ink: #f0ebe0;
+  --ink-muted: #9a9088;
+  --accent: #e05c3a;
+  --accent-ink: #151210;
+  --accent-soft: rgba(224, 92, 58, 0.16);
+  --accent-bright: #d4a84b;
+  --line: rgba(240, 235, 224, 0.1);
+  --line-strong: rgba(240, 235, 224, 0.22);
+  --state-confident: #e05c3a;
+  --state-building: #9a9088;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-
-  --star-rgb: 238, 240, 251;
-  --nebula-1: #6d3fa0;
-  --nebula-2: #3454b4;
-  --nebula-3: #1f8fa6;
-  --nebula-opacity: 0.35;
+  --grain-opacity: 0.05;
 }
 
 :root[data-theme="light"] {
-  --bg: #eef0f8;
-  --surface: #ffffff;
-  --surface-2: #e3e6f2;
-  --ink: #171528;
-  --ink-muted: #5b5a78;
-  --accent: #a8752a;
-  --accent-ink: #17120a;
-  --accent-soft: #f0e2c2;
-  --accent-bright: #c68f3f;
-  --line: rgba(23, 21, 40, 0.12);
-  --line-strong: rgba(23, 21, 40, 0.24);
-  --state-confident: #a8752a;
-  --state-building: #5b5a78;
-  --shadow: 0 1px 2px rgba(23, 21, 40, 0.08);
-
-  --star-rgb: 60, 55, 95;
-  --nebula-1: #9d7fd1;
-  --nebula-2: #7fa0e0;
-  --nebula-3: #6dc3c9;
-  --nebula-opacity: 0.16;
+  --bg: #f5f0e8;
+  --surface: #ede8dc;
+  --surface-2: #e4ddcd;
+  --ink: #0d0d0d;
+  --ink-muted: #7a7269;
+  --accent: #c84b2f;
+  --accent-ink: #f5f0e8;
+  --accent-soft: rgba(200, 75, 47, 0.12);
+  --accent-bright: #c9993a;
+  --line: rgba(13, 13, 13, 0.12);
+  --line-strong: rgba(13, 13, 13, 0.24);
+  --state-confident: #c84b2f;
+  --state-building: #7a7269;
+  --shadow: 0 1px 2px rgba(13, 13, 13, 0.08);
+  --grain-opacity: 0.035;
 }
 
 * {
@@ -130,9 +114,29 @@ body {
   margin: 0;
   color: var(--ink);
   font-family: var(--font-body);
+  font-weight: 300;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   transition: color 0.2s ease;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9000;
+  opacity: var(--grain-opacity);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
+  a, button {
+    cursor: none;
+  }
 }
 
 h1, h2, h3 {
@@ -155,7 +159,7 @@ button {
 
 ::selection {
   background: var(--accent-soft);
-  color: var(--accent-ink);
+  color: var(--ink);
 }
 
 :focus-visible {
