@@ -48,6 +48,72 @@ body:has(button:hover) .cursor-ring {
   }
 }
 
+/* ---------- cosmos background (sitewide, fixed) ---------- */
+
+.cosmos-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.starfield-canvas {
+  position: absolute;
+  inset: 0;
+}
+
+.nebula {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: var(--nebula-opacity);
+  will-change: transform;
+}
+
+.nebula-1 {
+  width: 46vw;
+  height: 46vw;
+  max-width: 560px;
+  max-height: 560px;
+  top: -14vw;
+  left: -12vw;
+  background: var(--nebula-1);
+  animation: drift-a 38s ease-in-out infinite;
+}
+
+.nebula-2 {
+  width: 40vw;
+  height: 40vw;
+  max-width: 480px;
+  max-height: 480px;
+  top: 32vh;
+  right: -14vw;
+  background: var(--nebula-2);
+  animation: drift-b 44s ease-in-out infinite;
+}
+
+.nebula-3 {
+  width: 38vw;
+  height: 38vw;
+  max-width: 440px;
+  max-height: 440px;
+  bottom: -12vw;
+  left: 22vw;
+  background: var(--nebula-3);
+  animation: drift-a 40s ease-in-out infinite reverse;
+}
+
+@keyframes drift-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(4vw, 3vh) scale(1.12); }
+}
+
+@keyframes drift-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-3.5vw, 4vh) scale(0.9); }
+}
+
 /* ---------- layout shell ---------- */
 
 main {
