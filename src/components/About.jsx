@@ -33,7 +33,7 @@ const timeline = [
 function About() {
   return (
     <section id="about" className="section">
-      <div className="section-inner">
+      <div className="section-inner reveal">
         <p className="section-eyebrow">About</p>
         <h2 className="section-title">Full-stack, from government infrastructure to enterprise platforms.</h2>
         <p className="about-body">

@@ -28,7 +28,7 @@ const EMAIL = 's.shraddha0023@gmail.com'
 function Contact() {
   return (
     <section id="contact" className="section">
-      <div className="section-inner">
+      <div className="section-inner reveal">
         <p className="section-eyebrow">Contact</p>
         <h2 className="section-title">Open to full-stack developer roles in Pune, and remote.</h2>
         <p className="about-body">

@@ -6,7 +6,7 @@ const practice = ['WCAG 2.1 Accessibility', 'Agile / Scrum', 'Solution Architect
 function Skills() {
   return (
     <section id="skills" className="section">
-      <div className="section-inner">
+      <div className="section-inner reveal">
         <p className="section-eyebrow">Skills</p>
         <h2 className="section-title">Full-stack across the JavaScript ecosystem, expanding into Java.</h2>
 

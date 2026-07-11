@@ -20,6 +20,9 @@
   --state-confident: #a8752a;
   --state-building: #55605c;
   --shadow: 0 1px 2px rgba(20, 24, 26, 0.06);
+  --glow-1: #a8752a;
+  --glow-2: #5b8a86;
+  --accent-bright: #c68f3f;
 
   --font-display: "Bricolage Grotesque", "Segoe UI", sans-serif;
   --font-body: "IBM Plex Sans", -apple-system, "Segoe UI", sans-serif;
@@ -43,6 +46,9 @@
     --state-confident: #e0a83f;
     --state-building: #b3a999;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --glow-1: #e0a83f;
+    --glow-2: #6fb0ab;
+    --accent-bright: #f0be6a;
   }
 }
 
@@ -76,6 +82,9 @@
   --state-confident: #a8752a;
   --state-building: #55605c;
   --shadow: 0 1px 2px rgba(20, 24, 26, 0.06);
+  --glow-1: #a8752a;
+  --glow-2: #5b8a86;
+  --accent-bright: #c68f3f;
 }
 
 * {
@@ -92,18 +101,33 @@ html {
   }
   * {
     animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes grid-pan {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 48px 48px;
   }
 }
 
 body {
   margin: 0;
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 48px 48px;
+  animation: grid-pan 70s linear infinite;
   color: var(--ink);
   font-family: var(--font-body);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 h1, h2, h3 {
