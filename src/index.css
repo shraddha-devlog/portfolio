@@ -1,0 +1,135 @@
+@import "@fontsource/bricolage-grotesque/500.css";
+@import "@fontsource/bricolage-grotesque/700.css";
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/500.css";
+@import "@fontsource/ibm-plex-sans/600.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+
+:root {
+  --bg: #eef1ef;
+  --surface: #ffffff;
+  --surface-2: #e2e8e4;
+  --ink: #14181a;
+  --ink-muted: #55605c;
+  --accent: #a8752a;
+  --accent-ink: #17120a;
+  --accent-soft: #f0e2c2;
+  --line: rgba(20, 24, 26, 0.14);
+  --line-strong: rgba(20, 24, 26, 0.28);
+  --state-confident: #a8752a;
+  --state-building: #55605c;
+  --shadow: 0 1px 2px rgba(20, 24, 26, 0.06);
+
+  --font-display: "Bricolage Grotesque", "Segoe UI", sans-serif;
+  --font-body: "IBM Plex Sans", -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171310;
+    --surface: #1f1a15;
+    --surface-2: #2a2319;
+    --ink: #f3efe7;
+    --ink-muted: #b3a999;
+    --accent: #e0a83f;
+    --accent-ink: #17120a;
+    --accent-soft: #3a2f1c;
+    --line: rgba(243, 239, 231, 0.12);
+    --line-strong: rgba(243, 239, 231, 0.24);
+    --state-confident: #e0a83f;
+    --state-building: #b3a999;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #171310;
+  --surface: #1f1a15;
+  --surface-2: #2a2319;
+  --ink: #f3efe7;
+  --ink-muted: #b3a999;
+  --accent: #e0a83f;
+  --accent-ink: #17120a;
+  --accent-soft: #3a2f1c;
+  --line: rgba(243, 239, 231, 0.12);
+  --line-strong: rgba(243, 239, 231, 0.24);
+  --state-confident: #e0a83f;
+  --state-building: #b3a999;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+:root[data-theme="light"] {
+  --bg: #eef1ef;
+  --surface: #ffffff;
+  --surface-2: #e2e8e4;
+  --ink: #14181a;
+  --ink-muted: #55605c;
+  --accent: #a8752a;
+  --accent-ink: #17120a;
+  --accent-soft: #f0e2c2;
+  --line: rgba(20, 24, 26, 0.14);
+  --line-strong: rgba(20, 24, 26, 0.28);
+  --state-confident: #a8752a;
+  --state-building: #55605c;
+  --shadow: 0 1px 2px rgba(20, 24, 26, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  text-wrap: balance;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
