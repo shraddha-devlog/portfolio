@@ -1,26 +1,32 @@
 const timeline = [
   {
-    when: '2023',
+    when: '2019 — 2023',
     title: 'B.Tech, Computer Science',
-    detail: 'Graduated with a foundation in core CS and web development.',
+    detail: 'Dr. A.P.J. Abdul Kalam Technical University.',
   },
   {
-    when: '2023 — 2024',
-    title: 'Project Engineer, Ministry of IT',
+    when: 'Oct 2023 — Jun 2024',
+    title: 'Project Engineer, ERNET · MeitY, Government of India',
     detail:
-      'Built and shipped a platform used across 100+ institutes — React frontend, backend logic, and database integration.',
+      'Architected and developed multi-institution portals serving 100+ institutes using React and Node.js. Built real-time dashboards and RESTful APIs, cutting manual administrative effort by 40%.',
   },
   {
-    when: '2024 — Present',
-    title: 'Sr. Product Solution Engineer, Tech Mahindra',
+    when: 'Jul 2024 — Mar 2025',
+    title: 'Technical Assistant, Teleperformance — Adobe Systems',
     detail:
-      'Customer-facing technical role for an enterprise telecom client — translating requirements into solutions, working closely with engineering.',
+      'Built and maintained a reusable React + Tailwind component design system for the Adobe Systems engagement. Led WCAG 2.1 accessibility audits and remediation.',
   },
   {
-    when: 'Now',
-    title: 'Rebuilding hands-on depth',
+    when: 'Mar 2025 — Oct 2025',
+    title: 'Software Developer, Async Zone',
     detail:
-      'Full-time focus on React, Java, and Spring Boot — shipping real projects to return to core engineering work.',
+      'Full-stack development on FocusApp, an export management platform, with React, Tailwind, Node.js, and MongoDB. Owned QA across multiple client products.',
+  },
+  {
+    when: 'Nov 2025 — Present',
+    title: 'Sr. Product Solution Engineer, Tech Mahindra · Client: Verizon',
+    detail:
+      'Leading frontend architecture and end-to-end solutioning for Verizon enterprise platforms — React.js + TypeScript interfaces for ML-powered workflows and real-time analytics.',
   },
 ]
 
@@ -29,11 +35,11 @@ function About() {
     <section id="about" className="section">
       <div className="section-inner">
         <p className="section-eyebrow">About</p>
-        <h2 className="section-title">A developer who spent time on the other side of the requirements doc.</h2>
+        <h2 className="section-title">Full-stack, from government infrastructure to enterprise platforms.</h2>
         <p className="about-body">
-          I started as a developer, moved into a role where I translated what clients actually needed into
-          technical asks, and I&rsquo;m now returning to building it myself — with a much clearer sense of
-          what makes software useful, not just functional.
+          Three years across four engagements — public-sector portals, an accessibility-first design system,
+          a multi-client full-stack role, and now leading frontend architecture for an enterprise Verizon
+          platform. Currently deepening Java and Spring Boot to round out the backend side.
         </p>
         <ol className="timeline">
           {timeline.map((item) => (

@@ -346,9 +346,14 @@ main {
 
 .project-card {
   background: var(--surface);
-  border: 1px dashed var(--line-strong);
+  border: 1px solid var(--line);
   padding: 22px;
   box-shadow: var(--shadow);
+}
+
+.project-card:has(.status-planned) {
+  border-style: dashed;
+  border-color: var(--line-strong);
 }
 
 .project-card-head {
